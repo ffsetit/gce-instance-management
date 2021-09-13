@@ -17,7 +17,7 @@ const compute = new Compute();
     try {
       const payload = _validatePayload(req);
       for(const nodes of payload.instances) {
-        const options = {filter: `labels.${nodes.label}`};
+        const options = {filter: `labels.${nodes.labels}`};
         const [vms] = await compute.getVMs(options);
         await Promise.all(
           vms.map(async instance => {
@@ -57,7 +57,7 @@ exports.stopInstance = async (req, res) => {
     try {
       const payload = _validatePayload(req);
       for(const nodes of payload.instances) {
-        const options = {filter: `labels.${nodes.label}`};
+        const options = {filter: `labels.${nodes.labels}`};
         const [vms] = await compute.getVMs(options);
         await Promise.all(
           vms.map(async instance => {
