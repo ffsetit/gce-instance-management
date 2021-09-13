@@ -1,0 +1,17 @@
+{
+    "name": "cloud-functions-schedule-instance",
+    "version": "0.1.0",
+    "private": true,
+    "license": "Apache-2.0",
+    "author": "Peter Barnes",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/ffsetit/gce-instance-management.git"
+    },
+    "engines": {
+      "node": ">=10.0.0"
+    },
+    "dependencies": {
+      "@google-cloud/compute": "^2.0.0"
+    }
+  }
